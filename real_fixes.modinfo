@@ -33,6 +33,7 @@
     <UpdateDatabase id="RFX_Database">
       <Properties><LoadOrder>1</LoadOrder></Properties>
       <File>real_fixes_base.sql</File>
+      <File>real_fixes_monks.sql</File>
     </UpdateDatabase>
     <UpdateDatabase id="RFX_StartBiases" criteria="BBSNotEnabled">
       <Properties><LoadOrder>1</LoadOrder></Properties>
@@ -65,6 +66,7 @@
     <File>real_fixes_xp2.sql</File>
     <File>real_fixes_start_biases.sql</File>
     <File>real_fixes_tokugawa.sql</File>
+    <File>real_fixes_monks.sql</File>
     <File>real_fixes_text.xml</File>
   </Files>
 </Mod>

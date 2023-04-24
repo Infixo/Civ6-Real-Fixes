@@ -8,7 +8,7 @@
 --------------------------------------------------------------
 
 
-/* not part of the public release
+--/* not part of the public release
 
 --------------------------------------------------------------
 -- 2023-04-13 Special KIND to handle all placeholders and not used objects, like in Agendas:
@@ -104,7 +104,7 @@ INSERT OR IGNORE INTO Types (Type, Kind) VALUES
 ('COMBAT_UNIT_VS_UNIT',     'KIND_CORRECT_VALUE'),
 ('BY_SETTLER', 'KIND_CORRECT_VALUE'); -- TransferType
 
-*/ -- not public release
+--*/ -- not public release
 
 
 -- 2018-03-25 Traits
