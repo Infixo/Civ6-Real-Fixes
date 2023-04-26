@@ -54,3 +54,13 @@ WHERE Name = 'EraType' AND ModifierId IN
 INSERT OR IGNORE INTO UnitAiInfos (UnitType, AiType) VALUES
 ('UNIT_MAORI_TOA',      'UNITAI_BUILD'),
 ('UNIT_CANADA_MOUNTIE', 'UNITAI_BUILD');
+
+
+--------------------------------------------------------------
+-- 230426 #12 Updates to favored techs and projects when going for Science Victory
+DELETE FROM AiFavoredItems WHERE ListType = 'ScienceVictoryTechs' AND Item IN ('TECH_NUCLEAR_FUSION', 'TECH_ROBOTICS'); -- mars reactor and mars habitation, no longer valid
+INSERT INTO AiFavoredItems (ListType,Item) VALUES
+('ScienceVictoryProjects','PROJECT_ORBITAL_LASER'),
+('ScienceVictoryProjects','PROJECT_TERRESTRIAL_LASER'),
+('ScienceVictoryTechs','TECH_SMART_MATERIALS'), -- exoplanet expedition
+('ScienceVictoryTechs','TECH_OFFWORLD_MISSION'); -- lasers
