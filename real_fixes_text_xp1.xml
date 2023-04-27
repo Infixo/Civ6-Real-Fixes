@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Real Fixes -->
+<!-- Author: Infixo -->
+<!-- Created: 2023-04-27 -->
+<GameData>
+  <LocalizedText>
+	<!--  ENGLISH -->
+	<!-- 230427 #7 After Action Reports policy wrong description -->
+	<Replace Tag="LOC_POLICY_AFTER_ACTION_REPORTS_DESCRIPTION" Language="en_US">
+	  <Text>All units gain +50% combat experience.</Text>
+	</Replace>
+  </LocalizedText>
+</GameData>

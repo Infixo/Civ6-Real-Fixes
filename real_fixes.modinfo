@@ -27,6 +27,10 @@
       <Properties><LoadOrder>1</LoadOrder></Properties>
       <File>real_fixes_text.xml</File>
     </UpdateText>
+    <UpdateText id="RFX_FrontEnd_Text_XP1">
+      <Properties><LoadOrder>2</LoadOrder></Properties>
+      <File>real_fixes_text_xp1.xml</File>
+    </UpdateText>
     <UpdateText id="RFX_FrontEnd_Text_XP2">
       <Properties><LoadOrder>3</LoadOrder></Properties>
       <File>real_fixes_text_xp2.xml</File>
@@ -52,6 +56,10 @@
       <Properties><LoadOrder>2</LoadOrder></Properties>
       <File>real_fixes_xp1.sql</File>
     </UpdateDatabase>
+    <UpdateText id="RFX_Text_XP1" criteria="Expansion1">
+      <Properties><LoadOrder>2</LoadOrder></Properties>
+      <File>real_fixes_text_xp1.xml</File>
+    </UpdateText>
     <!-- expansion 2 -->
     <UpdateDatabase id="RFX_Database_XP2" criteria="Expansion2">
       <Properties><LoadOrder>3</LoadOrder></Properties>
@@ -60,6 +68,7 @@
     </UpdateDatabase>
     <UpdateText id="RFX_Text_XP2" criteria="Expansion2">
       <Properties><LoadOrder>3</LoadOrder></Properties>
+      <File Priority="1">real_fixes_text_xp1.xml</File>
       <File>real_fixes_text_xp2.xml</File>
     </UpdateText>
     <!-- after expansions -->
@@ -76,6 +85,7 @@
     <File>real_fixes_tokugawa.sql</File>
     <File>real_fixes_monks.sql</File>
     <File>real_fixes_text.xml</File>
+    <File>real_fixes_text_xp1.xml</File>
     <File>real_fixes_text_xp2.xml</File>
   </Files>
 </Mod>
