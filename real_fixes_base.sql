@@ -462,3 +462,12 @@ UPDATE Improvement_Tourism SET ScalingFactor = 100 where ImprovementType = 'IMPR
 DELETE FROM TraitModifiers WHERE ModifierId = 'GAUL_MINE_TOURISM'; -- detach the modifier as not needed
 DELETE FROM ModifierArguments WHERE ModifierId = 'GAUL_MINE_TOURISM';
 DELETE FROM Modifiers WHERE ModifierId = 'GAUL_MINE_TOURISM';
+
+
+--------------------------------------------------------------
+-- 230427 Arrow Storm works vs districts too
+-- OPPONENT_IS_NOT_DISTRICT - added in Byzantium & Gaul DLC
+INSERT OR IGNORE INTO Requirements (RequirementId, RequirementType, Inverse) VALUES
+('OPPONENT_IS_NOT_DISTRICT', 'REQUIREMENT_OPPONENT_IS_DISTRICT', 1);
+INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES
+('ARROW_STORM_REQUIREMENTS', 'OPPONENT_IS_NOT_DISTRICT');
