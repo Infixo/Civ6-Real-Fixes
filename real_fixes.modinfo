@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Mod id="835c3ece-1a9c-4efb-996d-367815774ff0" version="1">
   <Properties>
     <Name>Real Fixes</Name>
@@ -27,6 +27,10 @@
       <Properties><LoadOrder>1</LoadOrder></Properties>
       <File>real_fixes_text.xml</File>
     </UpdateText>
+    <UpdateText id="RFX_FrontEnd_Text_XP2">
+      <Properties><LoadOrder>3</LoadOrder></Properties>
+      <File>real_fixes_text_xp2.xml</File>
+    </UpdateText>
   </FrontEndActions>
   <InGameActions>
     <!-- base game -->
@@ -54,6 +58,10 @@
       <File Priority="1">real_fixes_xp1.sql</File>
       <File>real_fixes_xp2.sql</File>
     </UpdateDatabase>
+    <UpdateText id="RFX_Text_XP2" criteria="Expansion2">
+      <Properties><LoadOrder>3</LoadOrder></Properties>
+      <File>real_fixes_text_xp2.xml</File>
+    </UpdateText>
     <!-- after expansions -->
     <UpdateDatabase id="RFX_Database_Tok" criteria="Tokugawa">
       <Properties><LoadOrder>4</LoadOrder></Properties>
@@ -68,5 +76,6 @@
     <File>real_fixes_tokugawa.sql</File>
     <File>real_fixes_monks.sql</File>
     <File>real_fixes_text.xml</File>
+    <File>real_fixes_text_xp2.xml</File>
   </Files>
 </Mod>

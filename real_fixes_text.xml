@@ -1,30 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Real Fixes -->
 <!-- Author: Infixo -->
-<!-- 2023-04-09: Fix for Jadwiga's text -->
+<!-- Created: 2023-04-09 -->
 <GameData>
   <LocalizedText>
     <!--  ENGLISH -->
 	<Replace Tag="LOC_TRAIT_LEADER_LITHUANIAN_UNION_DESCRIPTION" Language="en_US">
-		<Text>The Religion founded by Poland becomes the majority in an adjacent city that loses a tile to a Polish Culture Bomb. Holy Sites gain standard [ICON_FAITH] Faith adjacency bonus from adjacent districts. [ICON_GreatWork_Relic] Relics provide +2 [ICON_Faith] Faith, +2 [ICON_Culture] Culture, +4 [ICON_Gold] Gold.</Text>
+	  <Text>The Religion founded by Poland becomes the majority in an adjacent city that loses a tile to a Polish Culture Bomb. Holy Sites gain standard [ICON_FAITH] Faith adjacency bonus from adjacent districts. [ICON_GreatWork_Relic] Relics provide +2 [ICON_Faith] Faith, +2 [ICON_Culture] Culture, +4 [ICON_Gold] Gold.</Text>
 	</Replace>
 	<Replace Tag="LOC_TRAIT_LEADER_LITHUANIAN_UNION_ALT_DESCRIPTION" Language="en_US">
-		<Text>The Religion founded by Poland becomes the majority in an adjacent city that loses a tile to a Polish Culture Bomb. Holy Sites gain standard [ICON_FAITH] Faith adjacency bonus from adjacent districts. [ICON_GreatWork_Relic] Relics provide +2 [ICON_Faith] Faith, +2 [ICON_Culture] Culture, +4 [ICON_Gold] Gold.</Text>
+	  <Text>The Religion founded by Poland becomes the majority in an adjacent city that loses a tile to a Polish Culture Bomb. Holy Sites gain standard [ICON_FAITH] Faith adjacency bonus from adjacent districts. [ICON_GreatWork_Relic] Relics provide +2 [ICON_Faith] Faith, +2 [ICON_Culture] Culture, +4 [ICON_Gold] Gold.</Text>
 	</Replace>
 	<Replace Tag="LOC_TRAIT_LEADER_LITHUANIAN_UNION_HEROES_DESCRIPTION" Language="en_US">
-		<Text>The Religion founded by Poland becomes the majority in an adjacent city that loses a tile to a Polish Culture Bomb. Holy Sites gain standard [ICON_FAITH] Faith adjacency bonus from adjacent districts. [ICON_GreatWork_Relic] Relics and [ICON_GreatWork_HeroRelic] Heroic Relics provide +2 [ICON_Faith] Faith, +2 [ICON_Culture] Culture, +4 [ICON_Gold] Gold.</Text>
+	  <Text>The Religion founded by Poland becomes the majority in an adjacent city that loses a tile to a Polish Culture Bomb. Holy Sites gain standard [ICON_FAITH] Faith adjacency bonus from adjacent districts. [ICON_GreatWork_Relic] Relics and [ICON_GreatWork_HeroRelic] Heroic Relics provide +2 [ICON_Faith] Faith, +2 [ICON_Culture] Culture, +4 [ICON_Gold] Gold.</Text>
 	</Replace>
 	<Replace Tag="LOC_BOOST_TRIGGER_LONGDESC_SIEGE_TACTICS" Language="en_US">
-		<Text>After creating trebuchets you realize that castles are not impregnable – you need a stauncher defense!</Text>
+	  <Text>After creating trebuchets you realize that castles are not impregnable – you need a stauncher defense!</Text>
 	</Replace>	
 	<Replace Tag="LOC_TECH_TREE_TURNS" Language="en_US">
-		<Text>{1_Turns : plural 1?{1_Turns} TURN; other? {1_Turn} TURNS;}</Text>
+	  <Text>{1_Turns : plural 1?{1_Turns} TURN; other? {1_Turn} TURNS;}</Text>
 	</Replace>
 	<Replace Tag="LOC_GREATWORK_TCHAIKOVSKY_1_NAME" Language="en_US">
-		<Text>1812 Overture</Text>
+	  <Text>1812 Overture</Text>
 	</Replace>
 	<Replace Tag="LOC_TECH_SMART_MATERIALS_DESCRIPTION" Language="en_US">
-		<Text>Unlocks Giant Death Robot upgrade: Reinforced Armor Plating[NEWLINE]+10 [ICON_Strength] Combat Strength when defending against land and naval units.[NEWLINE]+1 [ICON_Production] Production to the Mine improvement.</Text>
+	  <Text>Unlocks Giant Death Robot upgrade: Reinforced Armor Plating[NEWLINE]+10 [ICON_Strength] Combat Strength when defending against land and naval units.[NEWLINE]+1 [ICON_Production] Production to the Mine improvement.</Text>
+	</Replace>
+	<!-- 230426 #9 Gauls' mines and Tourism -->
+	<Replace Tag="LOC_TRAIT_CIVILIZATION_GAUL_DESCRIPTION" Language="en_US">
+	  <Text>Mines provide a minor adjacency bonus for all districts, a Culture Bomb of unowned territory, receive +1 [ICON_CULTURE] Culture, and after researching Flight provide [ICON_TOURISM] Tourism. Specialty districts do not receive a minor adjacency for being adjacent to another district and these districts cannot be built adjacent to the City Center.</Text>
 	</Replace>
   </LocalizedText>
-<GameData>
+</GameData>
