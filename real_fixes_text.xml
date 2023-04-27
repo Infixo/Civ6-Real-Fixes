@@ -30,5 +30,12 @@
 	<Replace Tag="LOC_TRAIT_CIVILIZATION_GAUL_DESCRIPTION" Language="en_US">
 	  <Text>Mines provide a minor adjacency bonus for all districts, a Culture Bomb of unowned territory, receive +1 [ICON_CULTURE] Culture, and after researching Flight provide [ICON_TOURISM] Tourism. Specialty districts do not receive a minor adjacency for being adjacent to another district and these districts cannot be built adjacent to the City Center.</Text>
 	</Replace>
+	<!-- 230427 #4 Vatican's ability range 6 instead of 10 -->
+    <Replace Tag="LOC_CIVILIZATION_VATICAN_CITY_BONUS" Language="en_US"> <!-- there is a separate text for the city-state picker -->
+      <Text>When you activate a [ICON_GreatPerson] Great Person they spread 400 Religious pressure of your founded (or majority) religion to cities within 6 tiles.</Text>
+    </Replace>
+	<Replace Tag="LOC_LEADER_TRAIT_VATICAN_CITY_DESCRIPTION" Language="en_US">
+	  <Text>When you activate a [ICON_GreatPerson] Great Person they spread 400 Religious pressure of your founded (or majority) religion to cities within 6 tiles.</Text>
+	</Replace>
   </LocalizedText>
 </GameData>
