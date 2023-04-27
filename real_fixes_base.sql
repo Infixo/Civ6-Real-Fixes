@@ -452,3 +452,13 @@ INSERT OR IGNORE INTO UnitAiInfos (UnitType, AiType)
 SELECT 'UNIT_PORTUGUESE_NAU', 'UNITAI_BUILD'
 FROM Units
 WHERE UnitType = 'UNIT_PORTUGUESE_NAU';
+
+
+--------------------------------------------------------------
+-- 230426 #9 Gauls' mines give 100% tourism via modifier
+ -- make it "official" that mines give torurism from culture
+UPDATE Improvement_Tourism SET ScalingFactor = 100 where ImprovementType = 'IMPROVEMENT_MINE';
+-- detach and remove the modifier as not needed
+DELETE FROM TraitModifiers WHERE ModifierId = 'GAUL_MINE_TOURISM'; -- detach the modifier as not needed
+DELETE FROM ModifierArguments WHERE ModifierId = 'GAUL_MINE_TOURISM';
+DELETE FROM Modifiers WHERE ModifierId = 'GAUL_MINE_TOURISM';
