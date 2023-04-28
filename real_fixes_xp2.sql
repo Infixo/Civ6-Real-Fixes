@@ -64,3 +64,17 @@ INSERT INTO AiFavoredItems (ListType,Item) VALUES
 ('ScienceVictoryProjects','PROJECT_TERRESTRIAL_LASER'),
 ('ScienceVictoryTechs','TECH_SMART_MATERIALS'), -- exoplanet expedition
 ('ScienceVictoryTechs','TECH_OFFWORLD_MISSION'); -- lasers
+
+
+--------------------------------------------------------------
+-- 230428 Correct yields of Great Works from Babylon DLC
+-- GWs of Writing should yield +2 Culture and +2 Tourism in XP2
+
+UPDATE GreatWorks
+SET Tourism = 2
+WHERE GreatWorkObjectType = 'GREATWORKOBJECT_WRITING' AND GreatWorkType LIKE 'GREATWORK_BABYLON%';
+
+UPDATE GreatWork_YieldChanges
+SET YieldChange = 2
+WHERE YieldType = 'YIELD_CULTURE' AND GreatWorkType LIKE 'GREATWORK_BABYLON%'
+	AND GreatWorkType IN (SELECT GreatWorkType FROM GreatWorks WHERE GreatWorkObjectType = 'GREATWORKOBJECT_WRITING');

@@ -471,3 +471,11 @@ INSERT OR IGNORE INTO Requirements (RequirementId, RequirementType, Inverse) VAL
 ('OPPONENT_IS_NOT_DISTRICT', 'REQUIREMENT_OPPONENT_IS_DISTRICT', 1);
 INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES
 ('ARROW_STORM_REQUIREMENTS', 'OPPONENT_IS_NOT_DISTRICT');
+
+
+--------------------------------------------------------------
+-- 230428 Correct yields of Great Works from Babylon DLC
+-- GWs of Art should yield +2 Tourism
+UPDATE GreatWorks
+SET Tourism = 2
+WHERE GreatWorkObjectType IN ('GREATWORKOBJECT_LANDSCAPE','GREATWORKOBJECT_PORTRAIT') AND Image LIKE 'ICON_GREATWORK_BABYLON%';
