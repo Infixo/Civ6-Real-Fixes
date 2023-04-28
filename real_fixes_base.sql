@@ -465,12 +465,13 @@ DELETE FROM Modifiers WHERE ModifierId = 'GAUL_MINE_TOURISM';
 
 
 --------------------------------------------------------------
--- 230427 Arrow Storm works vs districts too
+-- 230427 Arrow Storm and Marauding work vs districts too
 -- OPPONENT_IS_NOT_DISTRICT - added in Byzantium & Gaul DLC
 INSERT OR IGNORE INTO Requirements (RequirementId, RequirementType, Inverse) VALUES
 ('OPPONENT_IS_NOT_DISTRICT', 'REQUIREMENT_OPPONENT_IS_DISTRICT', 1);
 INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES
-('ARROW_STORM_REQUIREMENTS', 'OPPONENT_IS_NOT_DISTRICT');
+('ARROW_STORM_REQUIREMENTS',  'OPPONENT_IS_NOT_DISTRICT'),
+('URBAN_RAIDER_REQUIREMENTS', 'OPPONENT_IS_NOT_DISTRICT');
 
 
 --------------------------------------------------------------
