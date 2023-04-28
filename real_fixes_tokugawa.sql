@@ -8,7 +8,13 @@
 INSERT INTO Modifiers (ModifierId, ModifierType) VALUES
 ('BAKUHAN_TOURISM_DISTRICTS_MODIFIER', 'MODIFIER_CITY_DISTRICTS_ADJUST_TOURISM_CHANGE');
 INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
-('BAKUHAN_TOURISM_DISTRICTS_MODIFIER', 'Amount', '2');
+('BAKUHAN_TOURISM_DISTRICTS_MODIFIER', 'Amount', '1');
+
+-- 230428 PLAYER_HAS_FLIGHT is in Byzantium & Gaul DLC 
+INSERT OR IGNORE INTO RequirementSets (RequirementSetId, RequirementSetType) VALUES
+('PLAYER_HAS_FLIGHT', 'REQUIREMENTSET_TEST_ALL');
+INSERT OR IGNORE INTO RequirementSetRequirements(RequirementSetId, RequirementId ) VALUES
+('PLAYER_HAS_FLIGHT', 'REQUIRES_PLAYER_HAS_FLIGHT');
 
 -- fix main modifier to attach the above one to cities within 6 tiles and when the player has flight
 UPDATE Modifiers

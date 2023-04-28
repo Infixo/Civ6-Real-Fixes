@@ -8,7 +8,7 @@
 --------------------------------------------------------------
 
 
---/* not part of the public release
+/* not part of the public release
 
 --------------------------------------------------------------
 -- 2023-04-13 Special KIND to handle all placeholders and not used objects, like in Agendas:
@@ -104,9 +104,10 @@ INSERT OR IGNORE INTO Types (Type, Kind) VALUES
 ('COMBAT_UNIT_VS_UNIT',     'KIND_CORRECT_VALUE'),
 ('BY_SETTLER', 'KIND_CORRECT_VALUE'); -- TransferType
 
---*/ -- not public release
+*/ -- not public release
 
 
+--------------------------------------------------------------
 -- 2018-03-25 Traits
 UPDATE Traits SET Name = 'LOC_TRAIT_LEADER_UNIT_ENGLISH_REDCOAT_NAME'      WHERE Name = 'LOC_TRAIT_LEADER_TRAIT_LEADER_UNIT_ENGLISH_REDCOAT_NAME'; -- typo
 UPDATE Traits SET Name = 'LOC_TRAIT_LEADER_UNIT_NORWEGIAN_LONGSHIP_NAME'   WHERE Name = 'LOC_TRAIT_LEADER_TRAIT_LEADER_UNIT_NORWEGIAN_LONGSHIP_NAME'; -- typo
@@ -114,6 +115,7 @@ UPDATE Traits SET Name = 'LOC_TRAIT_LEADER_UNIT_AMERICAN_ROUGH_RIDER_NAME' WHERE
 UPDATE Traits SET Name = 'LOC_TRAIT_CIVILIZATION_UNIT_HETAIROI_NAME'       WHERE Name = 'LOC_TRAIT_LEADER_UNIT_HETAIROI_NAME'; -- different LOC defined
 
 
+--------------------------------------------------------------
 -- 2018-03-25: AiFavoredItems
 UPDATE AiFavoredItems SET Item = 'CIVIC_NAVAL_TRADITION' WHERE Item = 'CIVIC_NAVAL_TRADITIION';
 DELETE FROM AiFavoredItems WHERE ListType = 'BaseListTest' AND Item = 'CIVIC_IMPERIALISM'; -- this is the only item defined for that list, and it is not existing in Civics, no idea what the author had in mind
@@ -122,6 +124,7 @@ DELETE FROM AiLists WHERE ListType = 'BaseListTest';
 DELETE FROM AiListTypes WHERE ListType = 'BaseListTest';
 
 
+--------------------------------------------------------------
 -- AI Strategy Medieval Fixes; fixed partially in Spring 2018 Patch
 --UPDATE StrategyConditions SET ConditionFunction = 'Is Medieval' WHERE StrategyType = 'STRATEGY_MEDIEVAL_CHANGES' AND Disqualifier = 0;
 -- 2023-03-29 Note that settlement changes are still bugged (not activated)
@@ -133,6 +136,7 @@ INSERT OR IGNORE INTO Strategy_Priorities (StrategyType, ListType) VALUES ('STRA
 --WHERE StrategyType = 'STRATEGY_MEDIEVAL_CHANGES';
 
 
+--------------------------------------------------------------
 -- AI Yield Bias
 -- Fixed in Spring 2018 Patch
 --UPDATE AiFavoredItems SET Item = 'YIELD_PRODUCTION' WHERE Item = 'YEILD_PRODUCTION';
@@ -142,36 +146,25 @@ INSERT OR IGNORE INTO Strategy_Priorities (StrategyType, ListType) VALUES ('STRA
 --UPDATE AiFavoredItems SET Item = 'YIELD_FAITH'      WHERE Item = 'YEILD_FAITH';
 
 
+--------------------------------------------------------------
 -- 2018-03-26: AiLists Alexander's trait
 -- Fixed with Gathering Storm Patch (left for iOS)
 --UPDATE AiLists SET LeaderType = 'TRAIT_LEADER_TO_WORLDS_END' WHERE LeaderType = 'TRAIT_LEADER_CITADEL_CIVILIZATION' AND ListType IN ('AlexanderCivics', 'AlexanderTechs', 'AlexanderWonders');
 
 
--- ModifierArguments
--- The below Values of AGENDA_xxx do not exist anywhere
--- Seems deliberate because there is a comment:
--- <!-- Note: Value not actually used, just has to have something so we know this is a kudo/warning -->
-/*
-AGENDA_AYYUBID_DYNASTY	StatementKey	ARGTYPE_IDENTITY	AGENDA_AYYUBID_DYNASTY_WARNING
-AGENDA_BLACK_QUEEN	StatementKey	ARGTYPE_IDENTITY	AGENDA_BLACK_QUEEN_WARNING
-AGENDA_BUSHIDO	StatementKey	ARGTYPE_IDENTITY	AGENDA_BUSHIDO_WARNING
-AGENDA_LAST_VIKING_KING	StatementKey	ARGTYPE_IDENTITY	AGENDA_LAST_VIKING_KING_WARNING
-AGENDA_OPTIMUS_PRINCEPS	StatementKey	ARGTYPE_IDENTITY	AGENDA_OPTIMUS_PRINCEPS_WARNING
-AGENDA_PARANOID	StatementKey	ARGTYPE_IDENTITY	AGENDA_PARANOID_WARNING
-AGENDA_QUEEN_OF_NILE	StatementKey	ARGTYPE_IDENTITY	AGENDA_QUEEN_OF_NILE_WARNING
-*/
-
-
+--------------------------------------------------------------
 -- 2018-05-19 AIRPOWER AI FIX: imho, it uses too big values, forcing AI to create too many units; balanced values used in RFX_AI file
 -- 2023-03-29 This was fixed in NFP, now the value is 3.0
 --UPDATE PseudoYields SET DefaultValue = 5 WHERE PseudoYieldType="PSEUDOYIELD_UNIT_AIR_COMBAT"; --DefaultValue=2 +50trait=52
 --UPDATE AiFavoredItems SET Value = 30 WHERE ListType = "AirpowerLoverAirpowerPreference"; --Value=50 30+22=52
 
 
+--------------------------------------------------------------
 -- 2018-12-09: Mispelled name <Row ListType="KoreaScienceBiase"/>
 -- it is used 3x, but in all cases the name is spelled the same, so it's not a problem
 
 
+--------------------------------------------------------------
 -- 2018-12-09: Missing entries in Types for Victory Strategies
 -- The only one that exists is Religious one
 INSERT OR IGNORE INTO Types (Type, Kind) VALUES
@@ -180,6 +173,7 @@ INSERT OR IGNORE INTO Types (Type, Kind) VALUES
 ('VICTORY_STRATEGY_SCIENCE_VICTORY',  'KIND_VICTORY_STRATEGY');
 
 
+--------------------------------------------------------------
 -- 2018-12-15: Double Wonder production bonus for Apadana and Halicarnassus from Corvee and Monument of the Gods, Huey from Gothic Architecture
 -- Fixed with Gathering Storm Patch (left for iOS)
 DELETE FROM PolicyModifiers WHERE PolicyType = 'POLICY_CORVEE' AND ModifierId = 'CORVEE_APADANAPRODUCTION';
@@ -189,28 +183,18 @@ DELETE FROM BeliefModifiers WHERE BeliefType = 'BELIEF_MONUMENT_TO_THE_GODS' AND
 DELETE FROM PolicyModifiers WHERE PolicyType = 'POLICY_GOTHIC_ARCHITECTURE' AND ModifierId = 'GOTHICARCHITECTURE_HUEYPRODUCTION';
 
 
+--------------------------------------------------------------
 -- 2018-12-25: Norwegian Longship has no PseudoYield assigned and Harald has a boost for that in his strategy!
 -- Fixed with Gathering Storm Patch (left for iOS)
 UPDATE Units SET PseudoYieldType = 'PSEUDOYIELD_UNIT_NAVAL_COMBAT' WHERE UnitType = 'UNIT_NORWEGIAN_LONGSHIP';
 
 
--- 2018-12-25: Some items in AiFavoredItems have values 1 and -1, which doesn't have any effect;
--- after some testnig: it doesn't mean that they should be 100 and -100, more like 1 and -1 have no effect, values should be just tuned properly
-/* all moved to RST
-UPDATE AiFavoredItems SET Value = -100 WHERE ListType = 'GandhiUnitBuilds' AND Item = 'PROMOTION_CLASS_INQUISITOR'; -- was -1 -- this should be India, anyway
-UPDATE AiFavoredItems SET Value =   25 WHERE ListType = 'TomyrisiUnitBuilds' AND Item = 'PROMOTION_CLASS_LIGHT_CAVALRY'; -- was 1
-UPDATE AiFavoredItems SET Value =  -10 WHERE ListType = 'AmanitoreUnitBuilds' AND Item = 'PROMOTION_CLASS_RANGED'; -- was 1
-UPDATE AiFavoredItems SET Value =   10 WHERE ListType = 'CounterReformerInquisitorPreference' AND Item = 'UNIT_INQUISITOR'; -- was 1 -- Philip II
-UPDATE AiFavoredItems SET Value =   25 WHERE ListType = 'JadwigaUnitBuilds' AND Item = 'UNIT_MILITARY_ENGINEER'; -- was 1
-UPDATE AiFavoredItems SET Value =   25 WHERE ListType = 'JayavarmanUnitBuilds' AND Item = 'UNIT_MISSIONARY'; -- was 1
--- the below list is assigned as default to ALL major civs, so be careful; there is also PseudoYield for that, AI+ set it to 1.4
-UPDATE AiFavoredItems SET Value =   20 WHERE ListType = 'UnitPriorityBoosts' AND Item = 'UNIT_SETTLER'; -- was 1 
-*/
-
+--------------------------------------------------------------
 -- 2019-01-01: "Make Military Formation" in AllowedMoves is set as IsHomeland, but used in Tactics lists for both Majors and Minors
 UPDATE AllowedMoves SET IsHomeland = 0, IsTactical = 1 WHERE AllowedMoveType = 'Make Military Formation';
 
 
+--------------------------------------------------------------
 -- 2019-01-01: "Plunder Trader" is only used by Barbarians, Majors and Minors don't use it
 -- I am not sure if this is an error, as apparently majors DO plunder TRs nonetheless
 -- BH trees have nodes for Pillaging but only for Districts and Improvements
@@ -220,10 +204,12 @@ INSERT OR REPLACE INTO AiFavoredItems (ListType, Item, Favored) VALUES
 --('FreeCitiesTactics', 'Plunder Trader', 1); R&F
 
 
+--------------------------------------------------------------
 -- 2019-01-01: AiOperationList Default_List is defined but never used (not causing problems, however)
 UPDATE Leaders SET OperationList = 'Default_List' WHERE LeaderType = 'LEADER_DEFAULT';
 
 
+--------------------------------------------------------------
 -- 2019-01-02: Wrong assignment of PseudoYield to Wonders for Pericles
 -- <Row ListType="PericlesWonders" Item="PSEUDOYIELD_INFLUENCE" Favored="true"/>
 -- <Row ListType="PericlesEnvoys" Item="BUILDING_POTALA_PALACE" Value="30"/>
@@ -232,12 +218,14 @@ UPDATE Leaders SET OperationList = 'Default_List' WHERE LeaderType = 'LEADER_DEF
 --UPDATE AiFavoredItems SET Item = 'PSEUDOYIELD_INFLUENCE'  WHERE ListType = 'PericlesEnvoys'  AND Item = 'BUILDING_POTALA_PALACE';
 
 
+--------------------------------------------------------------
 -- 2019-01-03: Some AiLists are assigned to Agenda Traits but registered in AiLists in a wrong column (for leaders, not agendas)
 --UPDATE AiLists SET LeaderType = NULL, AgendaType = 'TRAIT_AGENDA_BACKSTABBER'      WHERE LeaderType = 'TRAIT_AGENDA_BACKSTABBER'; -- 2023-03-29 fixed
 --UPDATE AiLists SET LeaderType = NULL, AgendaType = 'TRAIT_AGENDA_LAST_VIKING_KING' WHERE LeaderType = 'TRAIT_AGENDA_LAST_VIKING_KING'; -- Fixed with Gathering Storm Patch
 --UPDATE AiLists SET LeaderType = NULL, AgendaType = 'TRAIT_AGENDA_WITH_SHIELD'      WHERE LeaderType = 'TRAIT_AGENDA_WITH_SHIELD'; -- Fixed with Gathering Storm Patch
 
 
+--------------------------------------------------------------
 -- 2019-04-09 Warrior Monks don't have bonuses from Great Generals
 -- They are not counted as Medieval units - must be added to a ReqSet that selects subjects (GGs from Classical and Medieval eras)
 -- 240525 Moved to another file, in a more comprehensive way
@@ -400,29 +388,6 @@ INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES 
 UPDATE Modifiers SET SubjectRequirementSetId = 'HAGIA_SOPHIA_UNITS' WHERE ModifierId = 'HAGIA_SOPHIA_ADJUST_RELIGIOUS_CHARGES';
 
 
-
---------------------------------------------------------------
--- BALANCE SECTION
-
--- 2018-01-05: Policy God King. AI values it very low (40-60), vs. e.g. Urban Planning 250+. Changed to: gives yields to all cities.
---UPDATE Modifiers SET ModifierType = 'MODIFIER_PLAYER_CITIES_ADJUST_CITY_YIELD_CHANGE' WHERE ModifierId = 'GOD_KING_GOLD' OR ModifierId = 'GOD_KING_FAITH';
--- wow, it certainly works - comparable to Urban Planning now, but depends on situation highly (90-370)
--- comparison: Urban Planning (280-315), Seeds of Growth ~210
-
--- 2019-02-19: More XP from Barbarians
---UPDATE GlobalParameters SET Value = '2' WHERE Name = 'EXPERIENCE_BARB_SOFT_CAP';  -- Default: 1, CANNOT be higher than 8
---UPDATE GlobalParameters SET Value = '3' WHERE Name = 'EXPERIENCE_MAX_BARB_LEVEL'; -- Default: 2, CANNOT be higher than 6
-
-
---------------------------------------------------------------
--- MISC SECTION
-
---------------------------------------------------------------
--- 2018-12-22 From More Natural Beauty mod, increase number of Natural Wonders on maps	
---UPDATE Maps SET NumNaturalWonders = DefaultPlayers; -- default is 2,3,4,5,6,7 => will be 2,4,6,8,10,12
---UPDATE Features SET MinDistanceNW = 6 WHERE NaturalWonder = 1; -- default is 8
-
-
 --------------------------------------------------------------
 -- FIXES FROM DELNAR'S "AI CLEANUP" MOD
 -- AICleanup_BehaviorTrees - not valid any more, the Upgrade Tree doesn't use any field for the Upgrade Units node
@@ -435,6 +400,7 @@ UPDATE Modifiers SET SubjectRequirementSetId = 'HAGIA_SOPHIA_UNITS' WHERE Modifi
 -- AICleanup_Victories - in RST
 
 
+--------------------------------------------------------------
 -- This was an odd one. Gold for units was set to 4, gold for plots and GPs was set to 1, and gold for splurge was set to 3.
 -- Splurge should always be last in the priority list, so I assumed priority went lowest->highest and set gold for units to 2. -->
 -- 2023-03-29 Comment from devs in Civ Battle Royale is "The following puts all gold into slush funds [...]" and slush fund has priority 1
