@@ -78,3 +78,9 @@ UPDATE GreatWork_YieldChanges
 SET YieldChange = 2
 WHERE YieldType = 'YIELD_CULTURE' AND GreatWorkType LIKE 'GREATWORK_BABYLON%'
 	AND GreatWorkType IN (SELECT GreatWorkType FROM GreatWorks WHERE GreatWorkObjectType = 'GREATWORKOBJECT_WRITING');
+
+
+--------------------------------------------------------------
+-- 230501 Missing Deal Items Types
+INSERT INTO Types (Type, Kind) VALUES
+('DEAL_ITEM_FAVOR', 'KIND_DEAL_ITEM');

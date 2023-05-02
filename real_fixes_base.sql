@@ -446,3 +446,10 @@ INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES
 UPDATE GreatWorks
 SET Tourism = 2
 WHERE GreatWorkObjectType IN ('GREATWORKOBJECT_LANDSCAPE','GREATWORKOBJECT_PORTRAIT') AND Image LIKE 'ICON_GREATWORK_BABYLON%';
+
+
+--------------------------------------------------------------
+-- 230501 Missing Deal Items Types
+INSERT INTO Types (Type, Kind) VALUES
+('DEAL_ITEM_ALL',        'KIND_DEAL_ITEM'),
+('DEAL_ITEM_TECHNOLOGY', 'KIND_DEAL_ITEM');
