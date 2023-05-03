@@ -9,5 +9,9 @@
 	<Replace Tag="LOC_IMPROVEMENT_CHATEAU_EXPANSION2_DESCRIPTION" Language="en_US">
 	  <Text>Unlocks the Builder ability to construct a Château, unique to France.[NEWLINE][NEWLINE]+2 [ICON_Culture] Culture and +1 [ICON_Gold] Gold. +1 Appeal. +1 [ICON_Culture] Culture for every adjacent wonder (becomes +2 after researching Flight). +2 [ICON_Gold] Gold if on a tile containing a River edge. Provides [ICON_TOURISM] Tourism from [ICON_CULTURE] Culture after researching Flight. Must be placed on Floodplains or adjacent to a Bonus or Luxury resource. Cannot be built adjacent to another Château.</Text>
 	</Replace>
+	<!-- 230503 #17 Barracks' description does not mention anti-cav -->
+	<Replace Tag="LOC_BUILDING_BARRACKS_EXPANSION2_DESCRIPTION" Language="en_US">
+	  <Text>+25% combat experience for all melee, anti-cavalry and ranged land units trained in this city.[NEWLINE]Strategic Resource Stockpiles increased +10 (on Standard Speed).[NEWLINE][NEWLINE]May not be built in an Encampment district that already has a Stable.</Text>
+	</Replace>
   </LocalizedText>
 </GameData>

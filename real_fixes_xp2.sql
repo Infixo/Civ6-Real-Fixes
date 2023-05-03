@@ -84,3 +84,8 @@ WHERE YieldType = 'YIELD_CULTURE' AND GreatWorkType LIKE 'GREATWORK_BABYLON%'
 -- 230501 Missing Deal Items Types
 INSERT INTO Types (Type, Kind) VALUES
 ('DEAL_ITEM_FAVOR', 'KIND_DEAL_ITEM');
+
+
+--------------------------------------------------------------
+-- 230503 #16 POLICY_SKYSCRAPERS uses ERA_FUTURE in the base game
+UPDATE ModifierArguments SET Value = 'ERA_FUTURE' WHERE ModifierId = 'SKYSCRAPERS_INDUSTRIALINFORMATION' AND Name = 'EndEra';

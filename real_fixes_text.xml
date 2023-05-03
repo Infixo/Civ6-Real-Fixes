@@ -37,5 +37,9 @@
 	<Replace Tag="LOC_LEADER_TRAIT_VATICAN_CITY_DESCRIPTION" Language="en_US">
 	  <Text>When you activate a [ICON_GreatPerson] Great Person they spread 400 Religious pressure of your founded (or majority) religion to cities within 6 tiles.</Text>
 	</Replace>
+	<!-- 230503 #17 Barracks' description does not mention anti-cav -->
+	<Replace Tag="LOC_BUILDING_BARRACKS_DESCRIPTION" Language="en_US">
+	  <Text>+25% combat experience for all melee, anti-cavalry and ranged land units trained in this city.[NEWLINE][NEWLINE]May not be built in an Encampment district that already has a Stable.</Text>
+	</Replace>
   </LocalizedText>
 </GameData>

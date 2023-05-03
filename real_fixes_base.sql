@@ -8,7 +8,7 @@
 --------------------------------------------------------------
 
 
-/* not part of the public release
+--/* not part of the public release
 
 --------------------------------------------------------------
 -- 2023-04-13 Special KIND to handle all placeholders and not used objects, like in Agendas:
@@ -104,7 +104,7 @@ INSERT OR IGNORE INTO Types (Type, Kind) VALUES
 ('COMBAT_UNIT_VS_UNIT',     'KIND_CORRECT_VALUE'),
 ('BY_SETTLER', 'KIND_CORRECT_VALUE'); -- TransferType
 
-*/ -- not public release
+--*/ -- not public release
 
 
 --------------------------------------------------------------
@@ -453,3 +453,14 @@ WHERE GreatWorkObjectType IN ('GREATWORKOBJECT_LANDSCAPE','GREATWORKOBJECT_PORTR
 INSERT INTO Types (Type, Kind) VALUES
 ('DEAL_ITEM_ALL',        'KIND_DEAL_ITEM'),
 ('DEAL_ITEM_TECHNOLOGY', 'KIND_DEAL_ITEM');
+
+
+--------------------------------------------------------------
+-- 230503 #16 POLICY_SKYSCRAPERS uses ERA_FUTURE in the base game
+UPDATE ModifierArguments SET Value = 'ERA_INFORMATION' WHERE ModifierId = 'SKYSCRAPERS_INDUSTRIALINFORMATION' AND Name = 'EndEra';
+
+
+--------------------------------------------------------------
+-- 230503 #1 Fix Ibn Khaldun Bug
+UPDATE ModifierArguments SET Value = 4 WHERE Name = 'Amount' AND ModifierId LIKE 'GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_HAPPY_%';
+UPDATE ModifierArguments SET Value = 8 WHERE Name = 'Amount' AND ModifierId LIKE 'GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_ECSTATIC_%';
