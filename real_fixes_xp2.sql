@@ -89,3 +89,8 @@ INSERT INTO Types (Type, Kind) VALUES
 --------------------------------------------------------------
 -- 230503 #16 POLICY_SKYSCRAPERS uses ERA_FUTURE in the base game
 UPDATE ModifierArguments SET Value = 'ERA_FUTURE' WHERE ModifierId = 'SKYSCRAPERS_INDUSTRIALINFORMATION' AND Name = 'EndEra';
+
+
+--------------------------------------------------------------
+-- 230508 #21 Pillaging Dam does NOT yield health
+UPDATE Districts SET PlunderAmount = 50 WHERE DistrictType = 'DISTRICT_DAM';
