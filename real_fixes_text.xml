@@ -41,5 +41,18 @@
 	<Replace Tag="LOC_BUILDING_BARRACKS_DESCRIPTION" Language="en_US">
 	  <Text>+25% combat experience for all melee, anti-cavalry and ranged land units trained in this city.[NEWLINE][NEWLINE]May not be built in an Encampment district that already has a Stable.</Text>
 	</Replace>
+	<!-- 230508 #19 Texts for AGENDA_BARBARIAN_LOVER -->
+    <Replace Tag="LOC_DIPLO_KUDOS_LEADER_ANY_REASON_AGENDA_LOVES_BARBARIANS" Language="en_US"> <!-- StatementKey Kudo -->
+      <Text>(You have ignored clearing Barbarian Camps.)</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_MODIFIER_DESCRIPTION_LOVES_BARBARIANS" Language="en_US"> <!-- SimpleModifierDescription -->
+      <Text>They are pleased to see you not attacking Barbarian Camps</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_WARNING_LEADER_ANY_REASON_AGENDA_HATES_BARBARIANS" Language="en_US"> <!-- StatementKey Warning -->
+      <Text>(You have attacked a Barbarian Camp.)</Text>
+    </Replace>
+    <Replace Tag="LOC_DIPLO_MODIFIER_DESCRIPTION_HATES_BARBARIANS" Language="en_US"> <!-- SimpleModifierDescription -->
+      <Text>They dislike civilizations who attack Barbarian Camps</Text>
+    </Replace>
   </LocalizedText>
 </GameData>

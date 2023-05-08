@@ -94,3 +94,8 @@ UPDATE ModifierArguments SET Value = 'ERA_FUTURE' WHERE ModifierId = 'SKYSCRAPER
 --------------------------------------------------------------
 -- 230508 #21 Pillaging Dam does NOT yield health
 UPDATE Districts SET PlunderAmount = 50 WHERE DistrictType = 'DISTRICT_DAM';
+
+
+--------------------------------------------------------------
+-- 230508 #19 AGENDA_BARBARIAN_LOVER is missing
+INSERT INTO RandomAgendas_XP2 (AgendaType, AgendaTag) VALUES ('AGENDA_BARBARIAN_LOVER', 'AGENDA_EARLY_ERA_ONLY');

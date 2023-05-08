@@ -464,3 +464,45 @@ UPDATE ModifierArguments SET Value = 'ERA_INFORMATION' WHERE ModifierId = 'SKYSC
 -- 230503 #1 Fix Ibn Khaldun Bug
 UPDATE ModifierArguments SET Value = 4 WHERE Name = 'Amount' AND ModifierId LIKE 'GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_HAPPY_%';
 UPDATE ModifierArguments SET Value = 8 WHERE Name = 'Amount' AND ModifierId LIKE 'GREAT_PERSON_INDIVIDUAL_IBN_KHALDUN_EMPIRE_ECSTATIC_%';
+
+
+--------------------------------------------------------------
+-- 230508 #19 AGENDA_BARBARIAN_LOVER is missing
+-- This is a copy & paste from AltQin's Sihai agenda
+-- Already done: Agendas, LOCs for Name and Description, AgendaTraits (TRAIT_AGENDA_BARBARIAN_LOVER), Trait is registered
+-- Missing: positive and negative modifiers, set as Random
+
+-- Random agenda
+INSERT INTO RandomAgendas (AgendaType) VALUES ('AGENDA_BARBARIAN_LOVER');
+
+-- Modifiers: loves +6, hates -6
+INSERT INTO Modifiers (ModifierId, ModifierType, SubjectRequirementSetId) VALUES
+('AGENDA_LOVES_BARBARIANS', 'MODIFIER_PLAYER_DIPLOMACY_SIMPLE_MODIFIER', 'PLAYER_IGNORES_BARBARIAN_CAMPS'),
+('AGENDA_HATES_BARBARIANS', 'MODIFIER_PLAYER_DIPLOMACY_SIMPLE_MODIFIER', 'PLAYER_CLEARS_BARBARIAN_CAMPS');
+
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES
+('AGENDA_LOVES_BARBARIANS', 'InitialValue', '6'),
+('AGENDA_LOVES_BARBARIANS', 'StatementKey', 'LOC_DIPLO_KUDOS_LEADER_ANY_REASON_AGENDA_LOVES_BARBARIANS'),
+('AGENDA_LOVES_BARBARIANS', 'SimpleModifierDescription', 'LOC_DIPLO_MODIFIER_DESCRIPTION_LOVES_BARBARIANS'),
+('AGENDA_LOVES_BARBARIANS', 'HiddenAgenda', '1'),
+('AGENDA_HATES_BARBARIANS', 'InitialValue', '-6'),
+('AGENDA_HATES_BARBARIANS', 'StatementKey', 'LOC_DIPLO_WARNING_LEADER_ANY_REASON_AGENDA_HATES_BARBARIANS'),
+('AGENDA_HATES_BARBARIANS', 'SimpleModifierDescription', 'LOC_DIPLO_MODIFIER_DESCRIPTION_HATES_BARBARIANS'),
+('AGENDA_HATES_BARBARIANS', 'HiddenAgenda', '1');
+
+INSERT INTO ModifierStrings (ModifierId, Context, Text) VALUES
+('AGENDA_LOVES_BARBARIANS', 'Sample', 'LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL'),
+('AGENDA_HATES_BARBARIANS', 'Sample', 'LOC_TOOLTIP_SAMPLE_DIPLOMACY_ALL');
+
+-- Attach modifiers to the Trait
+INSERT INTO TraitModifiers (TraitType, ModifierId) VALUES
+('TRAIT_AGENDA_BARBARIAN_LOVER', 'AGENDA_LOVES_BARBARIANS'),
+('TRAIT_AGENDA_BARBARIAN_LOVER', 'AGENDA_HATES_BARBARIANS');
+
+-- AI behavior
+INSERT INTO AiListTypes (ListType) VALUES
+('BarbarianLoverPseudoYields');
+INSERT INTO AiLists (ListType, AgendaType, System) VALUES
+('BarbarianLoverPseudoYields', 'TRAIT_AGENDA_BARBARIAN_LOVER', 'PseudoYields');
+INSERT INTO AiFavoredItems (ListType, Item, Value) VALUES
+('BarbarianLoverPseudoYields', 'PSEUDOYIELD_CLEAR_BANDIT_CAMPS', -100);
