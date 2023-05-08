@@ -38,7 +38,7 @@
   </FrontEndActions>
   <InGameActions>
     <!-- base game -->
-    <UpdateDatabase id="RFX_Database">
+    <UpdateDatabase id="RFX_Database_Base">
       <Properties><LoadOrder>1</LoadOrder></Properties>
       <File>real_fixes_base.sql</File>
       <File>real_fixes_monks.sql</File>
@@ -47,10 +47,20 @@
       <Properties><LoadOrder>1</LoadOrder></Properties>
       <File>real_fixes_start_biases.sql</File>
     </UpdateDatabase>
-    <UpdateText id="RFX_Text">
+    <UpdateText id="RFX_Text_Base">
       <Properties><LoadOrder>1</LoadOrder></Properties>
       <File>real_fixes_text.xml</File>
     </UpdateText>
+	<ImportFiles id="RFX_Imports_Base">
+		<File>real_fixes_ChooseArtifact.lua</File>
+	</ImportFiles>
+	<ReplaceUIScript id="RFX_ReplaceUI_ChooseArtifact">
+	  <Properties>
+		<LoadOrder>1</LoadOrder>
+		<LuaContext>ChooseArtifact</LuaContext>
+		<LuaReplace>real_fixes_ChooseArtifact.lua</LuaReplace>
+	  </Properties>
+	</ReplaceUIScript>
     <!-- expansion 1 -->
     <UpdateDatabase id="RFX_Database_XP1" criteria="Expansion1">
       <Properties><LoadOrder>2</LoadOrder></Properties>
@@ -87,5 +97,6 @@
     <File>real_fixes_text.xml</File>
     <File>real_fixes_text_xp1.xml</File>
     <File>real_fixes_text_xp2.xml</File>
+    <File>real_fixes_ChooseArtifact.lua</File>
   </Files>
 </Mod>
