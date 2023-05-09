@@ -21,6 +21,13 @@
     <Criteria id="Tokugawa">
       <LeaderPlayable>Players:StandardPlayers::LEADER_TOKUGAWA,Players:Expansion1_Players::LEADER_TOKUGAWA,Players:Expansion2_Players::LEADER_TOKUGAWA</LeaderPlayable>
     </Criteria>
+	<Criteria id="SecretSocieties"> <!-- 230509 #24 -->
+	  <ConfigurationValueMatches>
+		<Group>Game</Group>
+		<ConfigurationId>GAMEMODE_SECRETSOCIETIES</ConfigurationId>
+		<Value>1</Value>
+	  </ConfigurationValueMatches>
+	</Criteria>
   </ActionCriteria>
   <FrontEndActions>
     <UpdateText id="RFX_FrontEnd_Text">
@@ -52,13 +59,14 @@
       <File>real_fixes_text.xml</File>
     </UpdateText>
 	<ImportFiles id="RFX_Imports_Base">
-		<File>real_fixes_ChooseArtifact.lua</File>
+      <Properties><LoadOrder>1</LoadOrder></Properties>
+	  <File>ui/real_fixes_ChooseArtifact.lua</File>
 	</ImportFiles>
 	<ReplaceUIScript id="RFX_ReplaceUI_ChooseArtifact">
 	  <Properties>
 		<LoadOrder>1</LoadOrder>
 		<LuaContext>ChooseArtifact</LuaContext>
-		<LuaReplace>real_fixes_ChooseArtifact.lua</LuaReplace>
+		<LuaReplace>ui/real_fixes_ChooseArtifact.lua</LuaReplace>
 	  </Properties>
 	</ReplaceUIScript>
     <!-- expansion 1 -->
@@ -86,6 +94,10 @@
       <Properties><LoadOrder>4</LoadOrder></Properties>
       <File>real_fixes_tokugawa.sql</File>
     </UpdateDatabase>
+	<ImportFiles id="RFX_Files_SecretSocieties" criteria="SecretSocieties">
+      <Properties><LoadOrder>4</LoadOrder></Properties>
+      <File>ui/diplomacyactionview_secretsocietyrow.lua</File>
+	</ImportFiles>
   </InGameActions>
   <Files>
     <File>real_fixes_base.sql</File>
@@ -94,9 +106,12 @@
     <File>real_fixes_start_biases.sql</File>
     <File>real_fixes_tokugawa.sql</File>
     <File>real_fixes_monks.sql</File>
+	<!-- text files -->
     <File>real_fixes_text.xml</File>
     <File>real_fixes_text_xp1.xml</File>
     <File>real_fixes_text_xp2.xml</File>
-    <File>real_fixes_ChooseArtifact.lua</File>
+	<!-- ui files -->
+    <File>ui/real_fixes_ChooseArtifact.lua</File>
+    <File>ui/diplomacyactionview_secretsocietyrow.lua</File> <!-- 230509 #24 -->
   </Files>
 </Mod>
