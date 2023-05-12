@@ -54,5 +54,30 @@
     <Replace Tag="LOC_DIPLO_MODIFIER_DESCRIPTION_HATES_BARBARIANS" Language="en_US"> <!-- SimpleModifierDescription -->
       <Text>They dislike civilizations who attack Barbarian Camps</Text>
     </Replace>
+	<!-- 230511 #31 Missing ability names -->
+	<Replace Tag="LOC_ABILITY_BARRACKS_TRAINED_UNIT_XP_NAME" Language="en_US">
+	  <Text>Barracks Trained</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_STABLE_TRAINED_UNIT_XP_NAME" Language="en_US">
+	  <Text>Stable Trained</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_ARMORY_TRAINED_UNIT_XP_NAME" Language="en_US">
+	  <Text>Armory Trained</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_MILITARY_ACADEMY_TRAINED_UNIT_XP_NAME" Language="en_US">
+	  <Text>Military Academy Trained</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_LIGHTHOUSE_TRAINED_UNIT_XP_NAME" Language="en_US">
+	  <Text>Lighthouse Trained</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_SHIPYARD_TRAINED_UNIT_XP_NAME" Language="en_US">
+	  <Text>Shipyard Trained</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_SEAPORT_TRAINED_UNIT_XP_NAME" Language="en_US">
+	  <Text>Seaport Trained</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_BASILIKOI_TRAINED_UNIT_XP_NAME" Language="en_US">
+	  <Text>Basilikoi Paides Trained</Text>
+	</Replace>
   </LocalizedText>
 </GameData>

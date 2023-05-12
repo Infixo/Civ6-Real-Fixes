@@ -9,5 +9,9 @@
 	<Replace Tag="LOC_POLICY_AFTER_ACTION_REPORTS_DESCRIPTION" Language="en_US">
 	  <Text>All units gain +50% combat experience.</Text>
 	</Replace>
+	<!-- 230511 #31 Missing ability names -->
+	<Replace Tag="LOC_ABILITY_ORDU_TRAINED_UNIT_XP_NAME" Language="en_US">
+	  <Text>Ordu Trained</Text>
+	</Replace>
   </LocalizedText>
 </GameData>

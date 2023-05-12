@@ -18,7 +18,7 @@
     <Criteria id="BBSNotEnabled">
       <ModInUse inverse="1">c88cba8b-8311-4d35-90c3-51a4a5d66550</ModInUse> <!-- Better Balanced Starts 2.2.0 -->
     </Criteria>
-    <Criteria id="Tokugawa">
+    <Criteria id="TokugawaFix">
       <LeaderPlayable>Players:StandardPlayers::LEADER_TOKUGAWA,Players:Expansion1_Players::LEADER_TOKUGAWA,Players:Expansion2_Players::LEADER_TOKUGAWA</LeaderPlayable>
     </Criteria>
 	<Criteria id="SecretSocieties"> <!-- 230509 #24 -->
@@ -27,6 +27,10 @@
 		<ConfigurationId>GAMEMODE_SECRETSOCIETIES</ConfigurationId>
 		<Value>1</Value>
 	  </ConfigurationValueMatches>
+	</Criteria>
+	<Criteria id="SaladinFix" any="1"> <!-- 230512 #18 Enable if either one is present -->
+	  <ModInUse>F48213B4-56F5-45DD-92F7-AC78E49BDA49</ModInUse> <!-- Great Warlords -->
+	  <ModInUse>7A66DB58-B354-4061-8C80-95B638DD6F6C</ModInUse> <!-- Great Negotiators -->
 	</Criteria>
   </ActionCriteria>
   <FrontEndActions>
@@ -90,7 +94,7 @@
       <File>real_fixes_text_xp2.xml</File>
     </UpdateText>
     <!-- after expansions -->
-    <UpdateDatabase id="RFX_Database_Tok" criteria="Tokugawa">
+    <UpdateDatabase id="RFX_Database_Tokugawa" criteria="TokugawaFix">
       <Properties><LoadOrder>4</LoadOrder></Properties>
       <File>real_fixes_tokugawa.sql</File>
     </UpdateDatabase>
@@ -98,6 +102,10 @@
       <Properties><LoadOrder>4</LoadOrder></Properties>
       <File>ui/diplomacyactionview_secretsocietyrow.lua</File>
 	</ImportFiles>
+    <UpdateDatabase id="RFX_Database_Saladin" criteria="SaladinFix">
+      <Properties><LoadOrder>4</LoadOrder></Properties>
+      <File>real_fixes_saladin.sql</File>
+    </UpdateDatabase>
   </InGameActions>
   <Files>
     <File>real_fixes_base.sql</File>
@@ -106,6 +114,7 @@
     <File>real_fixes_start_biases.sql</File>
     <File>real_fixes_tokugawa.sql</File>
     <File>real_fixes_monks.sql</File>
+    <File>real_fixes_saladin.sql</File>
 	<!-- text files -->
     <File>real_fixes_text.xml</File>
     <File>real_fixes_text_xp1.xml</File>
