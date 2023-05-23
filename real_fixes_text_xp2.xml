@@ -17,5 +17,30 @@
 	<Replace Tag="LOC_BUILDING_UNIVERSITY_SANKORE_DESCRIPTION" Language="en_US">
 	  <Text>Other Civilizations' [ICON_TradeRoute] Trade Routes to this city provide +1 [ICON_SCIENCE] Science and +1 [ICON_GOLD] Gold for them and +2 [ICON_SCIENCE] Science for you. Domestic [ICON_TradeRoute] Trade Routes ending here provide +2 [ICON_SCIENCE] Science and +1 [ICON_FAITH] Faith to their starting city.[NEWLINE][NEWLINE]Must be built on the Desert or Desert Hills, and adjacent to a Campus district with a University.</Text>
 	</Replace>
+	<!-- 230523 #31 Missing ability names -->
+	<Replace Tag="LOC_ABILITY_UNIT_WMD_RESISTANCE_NAME" Language="en_US">
+	  <Text>WMD Resistance</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_UNIT_FIGHT_WHILE_EMBARKED_NAME" Language="en_US">
+	  <Text>Fight While Embarked</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_TOA_NAME" Language="en_US">
+	  <Text>Toa</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_MANA_NAME" Language="en_US">
+	  <Text>Increased Embarked Movement</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_UNIT_AUTO_VETERANCY_NAME" Language="en_US">
+	  <Text>Auto Veterancy</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_UNIT_AUTO_VETERANCY_DESCRIPTION" Language="en_US">
+	  <Text>Cannot earn experience. Gains additional abilities and upgrades via technology research.</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_DIGITAL_DEMOCRACY_DEBUFF_NAME" Language="en_US">
+	  <Text>Digital Democracy Debuff</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_GLOBAL_COALITION_FRIENDLY_TERRITORY_NAME" Language="en_US">
+	  <Text>Global Coalition Buff</Text>
+	</Replace>
   </LocalizedText>
 </GameData>

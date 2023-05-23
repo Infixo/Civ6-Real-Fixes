@@ -13,5 +13,74 @@
 	<Replace Tag="LOC_ABILITY_ORDU_TRAINED_UNIT_XP_NAME" Language="en_US">
 	  <Text>Ordu Trained</Text>
 	</Replace>
+	<Replace Tag="LOC_ABILITY_PARADROP_NAME" Language="en_US">
+	  <Text>Paradrop</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_SCOTTISH_HIGHLANDER_NAME" Language="en_US">
+	  <Text>Highlander</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_MONGOLIAN_KESHIG_NAME" Language="en_US">
+	  <Text>Keshig</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_DUTCH_ZEVEN_PROVINCIEN_NAME" Language="en_US">
+	  <Text>De Zeven Provinciën</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_GEORGIAN_KHEVSURETI_NAME" Language="en_US">
+	  <Text>Khevsureti</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_MAPUCHE_MALON_RAIDER_NAME" Language="en_US">
+	  <Text>Malon Raider</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_CREE_OKIHTCITAW_NAME" Language="en_US">
+	  <Text>Okihtcitaw</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_ZULU_IMPI_NAME" Language="en_US">
+	  <Text>Impi</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_GRANT_MOVEMENT_BONUS_NAME" Language="en_US">
+	  <Text>Logistic Movement</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_TOQUI_XP_FROM_GOVERNOR_NAME" Language="en_US">
+	  <Text>Toqui Experience</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_TOQUI_XP_FROM_GOVERNOR_NOT_FOUNDED_NAME" Language="en_US">
+	  <Text>Toqui Triple Experience</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_TIMUR_BONUS_EXPERIENCE_NAME" Language="en_US">
+	  <Text>Timur Experience</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_DRONE_GRANT_SIEGE_BONUS_NAME" Language="en_US">
+	  <Text>Dron Adjacency</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_GENGHIS_KHAN_CAVALRY_BONUS_NAME" Language="en_US">
+	  <Text>Mongol Horde Strength</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_GENGHIS_KHAN_CAVALRY_CAPTURE_CAVALRY_NAME" Language="en_US">
+	  <Text>Mongol Horde Captures</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_RECEIVE_BOMBARD_STRENGTH_BUFF_NAME" Language="en_US">
+	  <Text>Targetting Assist</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_TOQUI_COMBAT_BUFF_VS_GOLDEN_AGE_NAME" Language="en_US"> <!-- not used? -->
+	  <Text>Toqui Combat</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_OLIGARCHY_LEGACY_MELEE_BUFF_NAME" Language="en_US">
+	  <Text>Oligarchy Legacy</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_OLIGARCHY_LEGACY_MELEE_BUFF_DESCRIPTION" Language="en_US">
+	  <Text>+4 [ICON_Strength] from Oligarchic Legacy.</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_THEOCRACY_LEGACY_RELIGIOUS_BUFF_NAME" Language="en_US">
+	  <Text>Theocracy Legacy</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_THEOCRACY_LEGACY_RELIGIOUS_BUFF_DESCRIPTION" Language="en_US">
+	  <Text>+5 [ICON_Strength] from Theocratic Legacy.</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_FASCISM_LEGACY_ATTACK_BUFF_NAME" Language="en_US">
+	  <Text>Fascism Legacy</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_FASCISM_LEGACY_ATTACK_BUFF_DESCRIPTION" Language="en_US">
+	  <Text>+5 [ICON_Strength] from Fascist Legacy.</Text>
+	</Replace>
   </LocalizedText>
 </GameData>

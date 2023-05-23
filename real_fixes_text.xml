@@ -79,5 +79,188 @@
 	<Replace Tag="LOC_ABILITY_BASILIKOI_TRAINED_UNIT_XP_NAME" Language="en_US">
 	  <Text>Basilikoi Paides Trained</Text>
 	</Replace>
+	<Replace Tag="LOC_ABILITY_OBSERVATION_STRENGTH_BONUS_NAME" Language="en_US">
+	  <Text>Increased Range</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_PUSHBACK" Language="en_US">
+	  <Text>Pushback</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_GREAT_ADMIRAL_MOVEMENT_NAME" Language="en_US">
+	  <Text>Great Admiral Movement</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_GREAT_GENERAL_MOVEMENT_NAME" Language="en_US">
+	  <Text>Great General Movement</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_HANGAR_TRAINED_AIRCRAFT_XP_NAME" Language="en_US">
+	  <Text>Hangar Trained</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_AIRPORT_TRAINED_AIRCRAFT_XP_NAME" Language="en_US">
+	  <Text>Airport Trained</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_ROYAL_NAVY_DOCKYARD_MOVEMENT_BONUS_NAME" Language="en_US">
+	  <Text>Royal Navy Movement</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_ROMAN_LEGION_BUILD_NAME" Language="en_US">
+	  <Text>Legion Build</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_GREAT_LIGHTHOUSE_MOVEMENT_NAME" Language="en_US">
+	  <Text>Increased Movement</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_GREAT_LIGHTHOUSE_EMBARKED_MOVEMENT_NAME" Language="en_US">
+	  <Text>Increased Embarked Movement</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_RAJENDRA_CHOLA_PLUNDER_BONUS_NAME" Language="en_US">
+	  <Text>Rajendra Chola Plunder</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_FRANCIS_DRAKE_PLUNDER_BONUS_NAME" Language="en_US">
+	  <Text>Francis Drake Plunder</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_CHING_SHIH_PLUNDER_BONUS_NAME" Language="en_US">
+	  <Text>Ching Shih Plunder</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_CLANCY_FERNANDO_BONUS_EXPERIENCE_NAME" Language="en_US">
+	  <Text>Clancy Fernando Experience</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_HORATIO_NELSON_FLANKING_BONUS_NAME" Language="en_US">
+	  <Text>Horatio Nelson Flanking</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_LASKARINA_BOUBOULINA_BONUS_EXPERIENCE_NAME" Language="en_US">
+	  <Text>Laskarina Bouboulina Experience</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_SERGEY_GORSHKOV_BONUS_EXPERIENCE_NAME" Language="en_US">
+	  <Text>Sergey Gorshkov Experience</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_GEORGY_ZHUKOV_FLANKING_BONUS_NAME" Language="en_US">
+	  <Text>Georgy Zhukov Flanking</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_JOHN_MONASH_BONUS_EXPERIENCE_NAME" Language="en_US">
+	  <Text>John Monash Experience</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_VIJAYA_WIMALARATNE_BONUS_EXPERIENCE_NAME" Language="en_US">
+	  <Text>Vijaya Wimalaratne Experience</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_HOJO_TOKIMUNE_COASTAL_COMBAT_BONUS_NAME" Language="en_US">
+	  <Text>Divine Wind Coastal</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_HOJO_TOKIMUNE_SHALLOW_WATER_COMBAT_BONUS_NAME" Language="en_US">
+	  <Text>Divine Wind Shallow Water</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_MONTEZUMA_COMBAT_BONUS_PER_LUXURY_NAME" Language="en_US">
+	  <Text>Tlatoani Combat</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_PHILIP_II_COMBAT_BONUS_OTHER_RELIGION_NAME" Language="en_US">
+	  <Text>El Escorial Combat</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_BARBAROSSA_COMBAT_BONUS_VS_CITY_STATES_NAME" Language="en_US">
+	  <Text>Holy Roman Combat</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_ROOSEVELT_COMBAT_BONUS_HOME_CONTINENT_NAME" Language="en_US">
+	  <Text>Corollary Combat</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_TOMYRIS_BONUS_VS_WOUNDED_UNITS_NAME" Language="en_US">
+	  <Text>Bonus vs Wounded</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_TOMYRIS_HEAL_AFTER_DEFEATING_UNIT_NAME" Language="en_US">
+	  <Text>Heal after Kill</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_KNARR_IGNORE_EMBARK_DISEMBARK_COST_NAME" Language="en_US">
+	  <Text>Knarr Embarking</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_GORGO_POLICY_SLOT_COMBAT_BONUS_NAME" Language="en_US">
+	  <Text>Thermopylae Combat</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_RANGED_ATTACK_DISTRICT_DEBUFF_NAME" Language="en_US">
+	  <Text>Ranged Attack Debuff</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_BOMBARD_ATTACK_UNIT_DEBUFF_NAME" Language="en_US">
+	  <Text>Bombard Attack Debuff</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_AIR_FIGHTER_ATTACK_DISTRICT_DEBUFF_NAME" Language="en_US">
+	  <Text>Fighter Attack Debuff</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_AIR_BOMBER_ATTACK_UNIT_DEBUFF_NAME" Language="en_US">
+	  <Text>Bomber Attack Debuff</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_ANTI_AIR_COVER_NAME" Language="en_US">
+	  <Text>Anti-Air Cover</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_JONG_NAME" Language="en_US">
+	  <Text>Jong</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_GITARJA_RELIGIOUS_NO_EMBARK_DISEMBARK_COST_NAME" Language="en_US">
+	  <Text>Free Embarkment</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_NUBIA_RANGED_EXPERIENCE_MODIFIER_NAME" Language="en_US">
+	  <Text>Ta-Seti Experience</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_COMMANDANTE_CAVALRY_BUFF_NAME" Language="en_US">
+	  <Text>Commandante Cavalry</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_COMMANDANTE_MELEE_ANTICAV_BUFF_NAME" Language="en_US">
+	  <Text>Commandante Melee and Anti-Cavalry</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_COMMANDANTE_UNIT_STRENGTH_BUFF_NAME" Language="en_US">
+	  <Text>Commandante Strength</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_COMMANDANTE_UNIT_STR_VS_DISTRICTS_NAME" Language="en_US">
+	  <Text>Commandante vs District</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_HULCHE_NAME" Language="en_US">
+	  <Text>Hul'che</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_NIHANG_BARRACKS_STRENGTH_NAME" Language="en_US">
+	  <Text>Nihang Barracks</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_NIHANG_ARMORY_STRENGTH_NAME" Language="en_US">
+	  <Text>Nihang Armory</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_NIHANG_ACADEMY_STRENGTH_NAME" Language="en_US">
+	  <Text>Nihang Academy</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_LLANERO_ADJACENCY_STRENGTH_NAME" Language="en_US">
+	  <Text>Llanero Adjacency</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_HYPASPIST_NAME" Language="en_US">
+	  <Text>Hypaspist</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_HETAIROI_NAME" Language="en_US">
+	  <Text>Hetairoi</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_HIMERIOS_BONUS_EXPERIENCE_NAME" Language="en_US">
+	  <Text>Himerios Experience</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_SOOTHSAYER_AOE_COMBAT_STRENGTH_NAME" Language="en_US">
+	  <Text>Soothsayer Adjacency</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_CULTIST_ENTER_FOREIGN_LANDS_NAME" Language="en_US">
+	  <Text>Enter Foreign Lands</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_RECEIVE_RANGE_BONUS_NAME" Language="en_US">
+	  <Text>Forward Observer</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_RECEIVE_RANGE_BONUS_DESCRIPTION" Language="en_US">
+	  <Text>+1 [ICON_Range] Range.</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_AUTO_SIEGE_NAME" Language="en_US">
+	  <Text>Auto Siege</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_HERO_COMBAT_STRENGTH_UNIT_NAME" Language="en_US">
+	  <Text>Inspiring Hero</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_HERO_COMBAT_STRENGTH_UNIT_DESCRIPTION" Language="en_US">
+	  <Text>[ICON_Strength] Combat Bonus from a nearby Inspiring Hero.</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_HIPPOLYTA_HEAL_PER_TURN_DESCRIPTION" Language="en_US">
+	  <Text>Hippolyta automatically heals {1_Amount} HP each turn.</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_MULAN_STRENGTH_PER_TURN_DESCRIPTION" Language="en_US">
+	  <Text>Mulan gains {1_Amount} [ICON_Strength] Combat Strength every turn.</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_MULAN_FORTIFY_DESCRIPTION" Language="en_US">
+	  <Text>Mulan fully fortifies automatically at the end of every turn.</Text>
+	</Replace>
+	<Replace Tag="LOC_ABILITY_SINBAD_GOLD_FOR_DISCOVERY_DESCRIPTION" Language="en_US">
+	  <Text>Sinbad earns {1_GoldReward} [ICON_GOLD] Gold whenever he discovers a Continent or Natural Wonder.</Text>
+	</Replace>
   </LocalizedText>
 </GameData>

@@ -8,7 +8,7 @@
 --------------------------------------------------------------
 
 
-/* not part of the public release
+--/* not part of the public release
 
 --------------------------------------------------------------
 -- 2023-04-13 Special KIND to handle all placeholders and not used objects, like in Agendas:
@@ -104,7 +104,7 @@ INSERT OR IGNORE INTO Types (Type, Kind) VALUES
 ('COMBAT_UNIT_VS_UNIT',     'KIND_CORRECT_VALUE'),
 ('BY_SETTLER', 'KIND_CORRECT_VALUE'); -- TransferType
 
-*/ -- not public release
+--*/ -- not public release
 
 
 --------------------------------------------------------------
@@ -506,3 +506,19 @@ INSERT INTO AiLists (ListType, AgendaType, System) VALUES
 ('BarbarianLoverPseudoYields', 'TRAIT_AGENDA_BARBARIAN_LOVER', 'PseudoYields');
 INSERT INTO AiFavoredItems (ListType, Item, Value) VALUES
 ('BarbarianLoverPseudoYields', 'PSEUDOYIELD_CLEAR_BANDIT_CAMPS', -100);
+
+
+--------------------------------------------------------------
+-- 230523 #31 Wolin's ability name typo
+UPDATE UnitAbilities SET Name = 'LOC_ABILITY_WOLIN_NAVAL_UNITS_NAME' WHERE UnitAbilityType = 'ABILITY_WOLIN_NAVAL_UNITS';
+
+
+--------------------------------------------------------------
+-- 230523 #31 Missing ability names and descriptions
+UPDATE UnitAbilities SET Name = 'LOC_'||UnitAbilityType||'_NAME' WHERE Name IS NULL;
+UPDATE UnitAbilities SET Description = 'LOC_'||UnitAbilityType||'_DESCRIPTION' WHERE Description IS NULL;
+
+
+--------------------------------------------------------------
+-- 230523 #28 Missing CityStatesOnly argument
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES ('MINOR_CIV_RELIGIOUS_YIELD_FOR_CONSULATE', 'CityStatesOnly', '1');
