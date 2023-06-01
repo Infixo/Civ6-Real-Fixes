@@ -82,5 +82,15 @@
 	<Replace Tag="LOC_ABILITY_FASCISM_LEGACY_ATTACK_BUFF_DESCRIPTION" Language="en_US">
 	  <Text>+5 [ICON_Strength] from Fascist Legacy.</Text>
 	</Replace>
+	<!-- NZ20230531 Correct poor English -->
+	<Replace Tag="LOC_MOMENT_GOVERNMENT_ENACTED_TIER_1_FIRST_IN_WORLD" Language="en_US">
+	  <Text>Your civilization is the first in the world to adopt a Tier 1 Government.</Text>
+	</Replace>
+	<Replace Tag="LOC_MOMENT_GOVERNMENT_ENACTED_TIER_2_FIRST_IN_WORLD" Language="en_US">
+	  <Text>Your civilization is the first in the world to adopt a Tier 2 Government.</Text>
+	</Replace>
+	<Replace Tag="LOC_MOMENT_GOVERNMENT_ENACTED_TIER_3_FIRST_IN_WORLD" Language="en_US">
+	  <Text>Your civilization is the first in the world to adopt a Tier 3 Government.</Text>
+	</Replace>
   </LocalizedText>
 </GameData>
